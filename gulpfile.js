@@ -7,10 +7,7 @@ const browserSync = require("browser-sync").create();
 
 // setup for Twig compilation
 const { TwingEnvironment, TwingLoaderRelativeFilesystem } = require("twing");
-const env = new TwingEnvironment(new TwingLoaderRelativeFilesystem(), {
-	auto_reload: true,
-	debug: true,
-});
+const loader = new TwingLoaderRelativeFilesystem();
 
 function reload(done) {
 	return browserSync.reload();
@@ -18,6 +15,10 @@ function reload(done) {
 }
 
 function testTwig() {
+	// This is the fix for watching:
+	// performance hit is negligible
+	const env = new TwingEnvironment(loader);
+
 	return gulp.src("index.twig")
 		.pipe(twing(env))
 		.pipe(gulp.dest("dist/"));
