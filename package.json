@@ -1,0 +1,26 @@
+{
+  "name": "gulp-twing-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-twing": "^3.0.1",
+    "twing": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsquared/gulp-twing-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsquared/gulp-twing-test/issues"
+  },
+  "homepage": "https://github.com/ahsquared/gulp-twing-test#readme"
+}
