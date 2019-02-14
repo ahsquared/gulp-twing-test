@@ -25,7 +25,7 @@ function testTwig() {
 
 function watch() {
 	gulp.task('testTwig')();
-	const watchTwig = gulp.watch(["index.twig"], gulp.series(testTwig, reload));
+	const watchTwig = gulp.watch(["index.twig"]).on("change", gulp.series(testTwig, reload));
 	browserSync.init({
 		server: {
 			baseDir: "./dist",
